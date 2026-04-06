@@ -104,9 +104,9 @@ def respond_with_gemini(query, indices, texts):
 
     model = get_gemini_model()
 
-response = model.generate_content(prompt)
+    response = model.generate_content(prompt)
 
-return response.text
+    return response.text
 
 # ========================
 # Streamlit
