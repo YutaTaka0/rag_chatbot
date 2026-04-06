@@ -4,7 +4,7 @@ import streamlit as st
 from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.metrics.pairwise import cosine_similarity
 from sentence_transformers import SentenceTransformer
-from google import genai
+import google.generativeai as genai
 from dotenv import load_dotenv
 
 # ========================
