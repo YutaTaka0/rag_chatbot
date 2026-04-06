@@ -23,7 +23,8 @@ if not api_key:
 # ========================
 @st.cache_resource
 def get_gemini_model():
-    return genai.Client(api_key=api_key)
+    genai.configure(api_key=api_key)
+    return genai.GenerativeModel("gemini-2.5-flash")
 
 # ========================
 # CSV読み込み
