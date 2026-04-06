@@ -102,12 +102,11 @@ def respond_with_gemini(query, indices, texts):
     質問：{query}
     """
 
-    response = client.models.generate_content(
-        model="gemini-2.5-flash",
-        contents=prompt
-    )
+    model = get_gemini_model()
 
-    return response.candidates[0].content.parts[0].text
+response = model.generate_content(prompt)
+
+return response.text
 
 # ========================
 # Streamlit
